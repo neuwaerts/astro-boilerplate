@@ -1,6 +1,9 @@
 ---
 import Root from "@/layouts/root.astro";
 import Welcome from "@/components/welcome.astro";
+import Neuwaerts from "@/components/neuwaerts.astro";
+import { Feature } from "@/components/react/feature";
+import { Example } from "@/components/react/example";
 
 const meta = {
   title: "Hello World",
@@ -9,5 +12,7 @@ const meta = {
 
 <Root {meta}>
   {/* Feel free to remove <Welcome /> */}
-  <Welcome />
+  <Welcome>
+    <Neuwaerts />
+  </Welcome>
 </Root>

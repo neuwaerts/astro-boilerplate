@@ -1,6 +1,23 @@
-export const sleep = (miliseconds: number) => new Promise((r) => setTimeout(r, miliseconds));
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
 
-export const local = (key: string, value: any = null): object => {
+interface ICn {
+  (...inputs: ClassValue[]): string
+}
+
+export const cn: ICn = (...inputs) => twMerge(clsx(inputs))
+
+interface ILocal {
+  (key: string, value?: object | boolean | string | null): any | void;
+}
+
+export const local: ILocal = (key, value = null): object => {
   if (value != null) localStorage[key] = JSON.stringify(value);
-  return localStorage?.[key] ? JSON.parse(localStorage[key]) : {};
+  return localStorage?.[key] && JSON.parse(localStorage[key]);
 };
+
+interface ISleep {
+  (ms: number): Promise<unknown>
+}
+
+export const sleep: ISleep = (ms) => new Promise((r) => setTimeout(r, ms));

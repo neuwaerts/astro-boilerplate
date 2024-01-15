@@ -1,9 +1,15 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+// import animate from 'tailwindcss-animate';
+// import forms from '@tailwindcss/forms';
+import type { Config } from "tailwindcss"
+import typography from '@tailwindcss/typography';
+
+
+const config: Config = {
   content: ["components/**", "layouts/**", "pages/**", "public/**"],
   theme: {
     extend: {
       fontSize: {
+        xsmall: '0.8125rem',
         small: ".875rem",
         p: "1rem",
         h6: "1.25rem",
@@ -14,44 +20,92 @@ module.exports = {
         h1: "4.375rem",
       },
       colors: {
-        border: "hsl(var(--border) / <alpha-value>)",
-        input: "hsl(var(--input) / <alpha-value>)",
-        ring: "hsl(var(--ring) / <alpha-value>)",
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
-        primary: {
-          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
-          foreground: "hsl(var(--primary-foreground) / <alpha-value>)",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
-          foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
-          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
-        },
+
+        border: "hsl(var(--border) / <alpha-value>)",
+
+        focus: "hsl(var(--focus) / <alpha-value>)",
+
         muted: {
           DEFAULT: "hsl(var(--muted) / <alpha-value>)",
           foreground: "hsl(var(--muted-foreground) / <alpha-value>)",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
-          foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover) / <alpha-value>)",
-          foreground: "hsl(var(--popover-foreground) / <alpha-value>)",
-        },
+
         card: {
           DEFAULT: "hsl(var(--card) / <alpha-value>)",
           foreground: "hsl(var(--card-foreground) / <alpha-value>)",
         },
+
+        popover: {
+          DEFAULT: "hsl(var(--popover) / <alpha-value>)",
+          foreground: "hsl(var(--popover-foreground) / <alpha-value>)",
+        },
+
+        primary: {
+          DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+          foreground: "hsl(var(--primary-foreground) / <alpha-value>)",
+        },
+
+        secondary: {
+          DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
+          foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
+        },
+
+        accent: {
+          background: "hsl(var(--accent-background) / <alpha-value>)",
+          DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+          foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
+        },
+
+        informative: {
+          background: "hsl(var(--informative-background) / <alpha-value>)",
+          DEFAULT: "hsl(var(--informative) / <alpha-value>)",
+          foreground: "hsl(var(--informative-foreground) / <alpha-value>)",
+        },
+
+        successful: {
+          background: "hsl(var(--successful-background) / <alpha-value>)",
+          DEFAULT: "hsl(var(--successful) / <alpha-value>)",
+          foreground: "hsl(var(--successful-foreground) / <alpha-value>)",
+        },
+
+        cautionary: {
+          background: "hsl(var(--cautionary-background) / <alpha-value>)",
+          DEFAULT: "hsl(var(--cautionary) / <alpha-value>)",
+          foreground: "hsl(var(--cautionary-foreground) / <alpha-value>)",
+        },
+
+        destructive: {
+          background: "hsl(var(--destructive-background) / <alpha-value>)",
+          DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
+          foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+        },
+      },
+      spacing: {
+        18: '4.5rem'
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
+        "0.5x": '0.5rem',
+        "1x": '1rem',
+        "2x": '2rem',
+      },
+      lineHeight: {
+        12: '3rem'
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.15s ease-out",
+        "accordion-up": "accordion-up 0.15s ease-out",
       },
       typography: () => ({
         accent: {
@@ -77,5 +131,7 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
-};
+  plugins: [/* animate, forms, */ typography],
+}
+
+export default config

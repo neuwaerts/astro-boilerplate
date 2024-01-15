@@ -1,0 +1,42 @@
+---
+import { Feature } from "./react/feature";
+import { Example } from "./react/example";
+/**
+ * Feel free to delete this file.
+ */
+---
+
+<section class="w-full mx-auto p-6 border border-border rounded-xl rich-text">
+  <header class="flex gap-1 flex-wrap font-medium text-center">
+    <div class="bg-muted rounded-full !text-h6 !leading-8 min-w-8">+</div>
+    <h2 class="bg-muted rounded-full !text-h6 !leading-8 !my-0 inline-block px-4 ">neuwaerts</h2>
+    <a class="bg-muted rounded-full !text-h6 !leading-8 px-4 !no-underline" href="https://github.com/neuwaerts/astro-boilerplate/releases" target="_blank" rel="noopener noreferrer">1.0</a>
+  </header>
+  <p>This Fork expands the capabilities of the Astro Boilerplate with the following features:</p>
+  <h3>Added</h3>
+  <ul>
+    <li><code>@astrojs/react</code> to support the React framework</li>
+    <li><code>shadcn/ui</code> and <code>radix</code> primitives extended support</li>
+    <li><code>class-variance-authority</code> to control component variants</li>
+    <li><code>clsx</code> to conditionally render and update CSS classes</li>
+    <li><code>tailwind-merge</code> to resolve CSS class conflicts</li>
+    <li><code>&lt;Neuwaerts&gt;</code> Astro component to showcase changes</li>
+    <li><code>&lt;Example&gt;</code> React client component to demonstrate CSR</li>
+    <li><code>&lt;Feature&gt;</code> React component to control feature flags</li>
+    <li>TypeScript interfaces for utility functions and components</li>
+  </ul>
+  <h3>Changed</h3>
+  <ul>
+    <li><code>&lt;Welcome&gt;</code> Astro component to display slotted elements</li>
+  </ul>
+  <h3>Removed</h3>
+  <ul>
+    <li><code>alpinejs</code> package and scaffolding in favor of <code>react</code></li>
+  </ul>
+  <Feature>   
+    <hr>
+    <h3>Example for the usage of React components</h3>
+    <p>The <code>&lt;Example&gt;</code> component gets statically rendered and hydrated. <a href="https://docs.astro.build/de/reference/directives-reference/#clientload">Learn more</a>.</p>
+    <Example client:load />
+  </Feature>
+</section>

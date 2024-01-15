@@ -5,8 +5,8 @@ import data from "@/package.json";
  */
 ---
 
-<main class="flex flex-col gap-12 min-h-screen py-12 px-6">
-  <header class="mt-auto text-center">
+<main class="flex flex-col items-center gap-6 min-h-screen py-12 px-6">
+  <header class="mt-auto text-center mb-6">
     <svg
       class="mx-auto"
       width="48"
@@ -38,7 +38,7 @@ import data from "@/package.json";
         </linearGradient>
       </defs>
     </svg>
-    <h1 class="text-foreground text-h5 font-medium leading-tight mt-3">
+    <h1 class="text-foreground text-h5 font-medium leading-8 mt-3">
       Astro Boilerplate
       <a
         class="text-accent"
@@ -55,7 +55,7 @@ import data from "@/package.json";
   </header>
 
   <section
-    class="max-w-prose mx-auto py-1 px-6 border border-border rounded-xl rich-text"
+    class="w-full mx-auto py-1 px-6 border border-border rounded-xl rich-text"
   >
     <h2 class="!mt-5 text-foreground">
       What's new in version {data.version}?
@@ -68,12 +68,15 @@ import data from "@/package.json";
         <a
           href="https://ui.shadcn.com/docs/theming"
           target="_blank"
-          rel="noopener noreferrer">shadcn/ui</a>
+          rel="noopener noreferrer">shadcn/ui</a
+        >
       </li>
     </ul>
   </section>
 
-  <div class="text-center mt-auto mx-auto">
+  <slot />
+
+  <div class="text-center pt-6 mt-auto mx-auto">
     Built with <a
       class="text-accent"
       href="https://astro.build/"
