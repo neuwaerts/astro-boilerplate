@@ -2,7 +2,7 @@ import { cn } from "@/scripts/utilities";
 import { cva } from "class-variance-authority";
 import type { JSX } from "astro/jsx-runtime";
 
-const app_env = process.env.APP_ENV;
+const app_env = import.meta.env.APP_ENV;
 
 const variants = cva([], {
   variants: {
@@ -34,7 +34,7 @@ export interface IFeature {
 }
 
 export const Feature: IFeature = ({ flag = 'development', children }) => {
-  if (process.env.NODE_ENV != 'development') return;
+  if (import.meta.env.PROD) return;
   if (app_env == 'preview' && flag == 'development') return;
   if (app_env == 'production' && flag != 'production') return;
 
