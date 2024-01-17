@@ -13,9 +13,9 @@ const variants = cva([], {
     },
 
     text: {
-      development: "text-successful-background",
-      preview: "text-cautionary-background",
-      production: "text-destructive-background"
+      development: "text-successful-foreground",
+      preview: "text-cautionary-foreground",
+      production: "text-destructive-foreground"
     },
 
     border: {

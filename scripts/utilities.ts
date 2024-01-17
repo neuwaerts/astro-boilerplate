@@ -8,7 +8,7 @@ interface ICn {
 export const cn: ICn = (...inputs) => twMerge(clsx(inputs))
 
 interface ILocal {
-  (key: string, value?: object | boolean | string | null): any | void;
+  (key: string, value?: unknown | null): unknown | void;
 }
 
 export const local: ILocal = (key, value = null): object => {

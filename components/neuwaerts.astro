@@ -10,28 +10,20 @@ import { Example } from "./react/example";
   <header class="flex gap-1 flex-wrap font-medium text-center">
     <div class="bg-muted rounded-full !text-h6 !leading-8 min-w-8">+</div>
     <h2 class="bg-muted rounded-full !text-h6 !leading-8 !my-0 inline-block px-4 ">neuwaerts</h2>
-    <a class="bg-muted rounded-full !text-h6 !leading-8 px-4 !no-underline" href="https://github.com/neuwaerts/astro-boilerplate/releases" target="_blank" rel="noopener noreferrer">1.0n</a>
+    <a class="bg-muted rounded-full !text-h6 !leading-8 px-4 !no-underline" href="https://github.com/neuwaerts/astro-boilerplate/releases" target="_blank" rel="noopener noreferrer">1.1.0n</a>
   </header>
   <p>This fork extends the capabilities of the Astro Boilerplate with the following features:</p>
   <h3>Added</h3>
   <ul>
-    <li><code>@astrojs/react</code> to support the React framework</li>
-    <li><code>shadcn/ui</code> and <code>radix</code> primitives extended support</li>
-    <li><code>class-variance-authority</code> to control component variants</li>
-    <li><code>clsx</code> to conditionally render and update CSS classes</li>
-    <li><code>tailwind-merge</code> to resolve CSS class conflicts</li>
-    <li><code>&lt;Neuwaerts&gt;</code> Astro component to showcase changes</li>
-    <li><code>&lt;Example&gt;</code> React client component to demonstrate CSR</li>
-    <li><code>&lt;Feature&gt;</code> React component to control feature flags</li>
-    <li>TypeScript interfaces for utility functions and components</li>
+    <li><code>.env.example</code> to demonstrate use of environment variables</li>
+    <li><code>documentation.md</code> to document project details</li>
   </ul>
   <h3>Changed</h3>
   <ul>
-    <li><code>&lt;Welcome&gt;</code> Astro component to display slotted elements</li>
-  </ul>
-  <h3>Removed</h3>
-  <ul>
-    <li><code>alpinejs</code> package and scaffolding in favor of <code>react</code></li>
+    <li><code>readme.md</code> to match the neuwaerts repository template</li>
+    <li><code>.gitignore</code> to match the neuwaerts repository template</li>
+    <li><code>meta.astro</code> to use `APP_NAME` for document title</li>
+    <li><code>utilities.ts</code> to update typed interfaces</li>
   </ul>
   <Feature flag="development">   
     <hr>

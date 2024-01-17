@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   meta: {
@@ -16,8 +16,8 @@ const { meta } = Astro.props;
 const { origin, href } = Astro.url;
 
 const title = meta?.title
-  ? `${meta.title} &bull; Astro Boilerplate`
-  : "Astro Boilerplate";
+  ? `${meta.title} &bull; ${import.meta.env.APP_NAME}`
+  : import.meta.env.APP_NAME;
 ---
 
 <head>
@@ -54,6 +54,6 @@ const title = meta?.title
       </>
     )
   }
-  <ViewTransitions fallback="swap" />
+  <!-- <ViewTransitions fallback="swap" /> -->
   <slot />
 </head>

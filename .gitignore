@@ -1,21 +1,40 @@
-# build output
+# Build output
 dist/
-# generated types
-.astro/
 
-# dependencies
+# Environment
+.env*
+.env.production
+!.env.example
+
+# Generated files
+.astro/
+.unlighthouse/
+
+# IDE directories files
+.idea/
+.phpintel/
+.vscode/
+
+# macOS files
+._*
+.DS_Store
+
+# npm
 node_modules/
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# PHP tools
+adminer.*
+info.php
 
+# Sensitive files
+*.log*
+*.sql*
 
-# environment variables
-.env
-.env.production
+# Windows files
+$RECYCLE.BIN/
+Desktop.ini
+ehthumbs.db
+Thumbs.db
 
-# macOS-specific files
-.DS_Store
+# .gitkeep
+!/**/.gitkeep
