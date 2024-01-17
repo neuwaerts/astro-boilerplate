@@ -1,5 +1,5 @@
-// import animate from 'tailwindcss-animate';
-// import forms from '@tailwindcss/forms';
+import animate from 'tailwindcss-animate';
+import forms from '@tailwindcss/forms';
 import type { Config } from "tailwindcss"
 import typography from '@tailwindcss/typography';
 
@@ -53,31 +53,26 @@ const config: Config = {
         },
 
         accent: {
-          background: "hsl(var(--accent-background) / <alpha-value>)",
           DEFAULT: "hsl(var(--accent) / <alpha-value>)",
           foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
         },
 
         informative: {
-          background: "hsl(var(--informative-background) / <alpha-value>)",
           DEFAULT: "hsl(var(--informative) / <alpha-value>)",
           foreground: "hsl(var(--informative-foreground) / <alpha-value>)",
         },
 
         successful: {
-          background: "hsl(var(--successful-background) / <alpha-value>)",
           DEFAULT: "hsl(var(--successful) / <alpha-value>)",
           foreground: "hsl(var(--successful-foreground) / <alpha-value>)",
         },
 
         cautionary: {
-          background: "hsl(var(--cautionary-background) / <alpha-value>)",
           DEFAULT: "hsl(var(--cautionary) / <alpha-value>)",
           foreground: "hsl(var(--cautionary-foreground) / <alpha-value>)",
         },
 
         destructive: {
-          background: "hsl(var(--destructive-background) / <alpha-value>)",
           DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
           foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
         },
@@ -131,7 +126,7 @@ const config: Config = {
       }),
     },
   },
-  plugins: [/* animate, forms, */ typography],
+  plugins: [animate, forms, typography],
 }
 
 export default config

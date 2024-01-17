@@ -8,15 +8,15 @@
   :root {
     --radius: 1rem;
 
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
+    --background: 240 10% 4%; // Zinc 950
+    --foreground: 0 0% 98%; // Zinc 50
 
-    --border: 240 5% 26%;
+    --border: 240 4% 16%; // Zinc 800
 
     --focus: var(--accent);
 
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 240 6% 10%; // Zinc 900
+    --muted-foreground: 240 5% 65%; // Zinc 400
 
     --card: var(--background);
     --card-foreground: var(--muted-foreground);
@@ -30,34 +30,39 @@
     --secondary: var(--muted);
     --secondary-foreground: var(--muted-foreground);
 
-    --accent-background: 242 47% 34%;
-    --accent: 239 84% 67%; // Indigo 500
-    --accent-foreground: 226 100% 94%;
+    --accent: 234 89% 74%; // Indigo 400
+    --accent-foreground: var(--background);
 
-    --informative-background: 202 80% 24%;
-    --informative: 199 89% 48%;
-    --informative-foreground: 204 94% 94%;
+    --informative: 198 93% 60%; // Sky 400
+    --informative-foreground: var(--background);
 
-    --successful-background: 164 86% 16%;
-    --successful: 160 84% 39%;
-    --successful-foreground: 149 80% 90%;
+    --successful: 158 64% 52%; // Emerald 400
+    --successful-foreground: var(--background);
 
-    --cautionary-background: 22 78% 26%;
-    --cautionary: 38 92% 50%;
-    --cautionary-foreground: 48 96% 89%;
+    --cautionary: 43 96% 56%; // Amber 400
+    --cautionary-foreground: var(--background);
 
-    --destructive-background: 342 75% 30%;
-    --destructive: 350 89% 60%;
-    --destructive-foreground: 356 100% 95%;
+    --destructive: 351 95% 71%; // Rose 400
+    --destructive-foreground: var(--background);
 
     @media (prefers-color-scheme: light) {
-      --background: 240 6% 90%;
-      --foreground: 240 10% 4%;
-
-      --border: 240 5% 84%;
-
-      --muted: 0 0% 98%;
-      --muted-foreground: 240 5% 34%;
+      --background: 0 0% 98%; // Zinc 50
+      --foreground: 240 10% 4%; // Zinc 950
+  
+      --border: 240 6% 90%; // Zinc 200
+    
+      --muted: 240 5% 96%; // Zinc 100
+      --muted-foreground: 240 5% 34%; // Zinc 600
+  
+      --accent: 243 75% 59%; // Indigo 600
+      
+      --informative: 200 98% 39%; // Sky 600
+  
+      --successful: 161 94% 30%; // Emerald 600
+  
+      --cautionary: 32 95% 44%; // Amber 600
+  
+      --destructive: 347 77% 50%; // Rose 600
     }
   }
 }
@@ -65,10 +70,10 @@
 @layer utilities {
   .rich-text {
     @apply 
-      prose
-      prose-accent
-      prose-blockquote:border-l-accent
-      prose-headings:scroll-my-36
+      prose 
+      prose-accent 
+      prose-blockquote:border-l-accent 
+      prose-headings:scroll-my-36 
       prose-headings:text-foreground
   }
 
