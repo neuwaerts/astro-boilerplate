@@ -28,7 +28,7 @@ const variants = cva([], {
 
 export interface IFeature {
   ({ flag, children }: {
-    flag?: 'development' | 'preview' | 'production' | string,
+    flag?: 'development' | 'preview' | 'production',
     children?: JSX.Element
   }): JSX.Element
 }
