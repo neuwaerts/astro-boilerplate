@@ -5,8 +5,20 @@ import typography from '@tailwindcss/typography';
 
 
 const config: Config = {
-  content: ["components/**", "layouts/**", "pages/**", "public/**"],
+  content: [
+    "components/**",
+    "layouts/**",
+    "pages/**",
+    "public/**",
+  ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "90rem",
+      }
+    },
     extend: {
       fontSize: {
         xsmall: '0.8125rem',
@@ -25,7 +37,9 @@ const config: Config = {
 
         border: "hsl(var(--border) / <alpha-value>)",
 
-        focus: "hsl(var(--focus) / <alpha-value>)",
+        input: "hsl(var(--input))",
+
+        ring: "hsl(var(--ring))",
 
         muted: {
           DEFAULT: "hsl(var(--muted) / <alpha-value>)",
@@ -81,9 +95,9 @@ const config: Config = {
         18: '4.5rem'
       },
       borderRadius: {
-        "0.5x": '0.5rem',
-        "1x": '1rem',
-        "2x": '2rem',
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       lineHeight: {
         12: '3rem'
