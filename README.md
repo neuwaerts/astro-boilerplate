@@ -102,8 +102,6 @@ which enables or disables rendering for wrapped elements based on the
 set environment. This component is usable in `.tsx` or `.astro` files and will 
 be treated as static HTML by Astro, if not specified otherwise.
 
-@todo: Complete chapter…
-
 ---
 
 ## Commands
