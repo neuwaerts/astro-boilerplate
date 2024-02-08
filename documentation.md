@@ -127,6 +127,20 @@ to extend support for design systems and preconfigured feature snippets:
 - While support for component libraries such as `shadcn/ui` is enabled, 
   the underlying design system has been enhanced with additional tokens.
 
+#### Hydrating interactive components
+
+Astro is a static site generator that renders framework components as static 
+HTML by default. To enable hydration for framework components, use the 
+[`client:*` directives](https://docs.astro.build/en/reference/directives-reference/#client-directives), such as `<Example client:load />`. 
+Learn more on [hydrating interactive components](https://docs.astro.build/en/guides/framework-components/#hydrating-interactive-components)
+
+#### Passing props to framework components
+
+Serializable data types are required when passing props to 
+framework components. Although serialized props can be passed from Astro 
+components to framework components, the reverse is not possible.
+Learn more on [passing props to framework components](https://docs.astro.build/en/guides/framework-components/#passing-props-to-framework-components).
+
 ## Source code
 
 ### Dependencies
